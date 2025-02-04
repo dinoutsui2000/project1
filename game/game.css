@@ -1,0 +1,131 @@
+/* 游戏页面的主要标题 */
+h2 {
+    font-size: 32px;
+    color: rgba(20, 35, 59, 0.8);
+    margin-top: 100px;
+}
+
+/* 游戏棋盘整体布局 */
+.game-board {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0;
+}
+
+/* 每个玩家的棋盘 */
+.board {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #00aaff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 170, 255, 0.6);
+    text-align: center;
+}
+
+/* 棋盘标题 */
+.board h3 {
+    color: #00ccff;
+    text-shadow: 1px 1px 5px rgba(0, 170, 255, 0.7);
+    margin-bottom: 10px;
+}
+
+/* 棋盘网格布局 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    gap: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 10px rgba(0, 170, 255, 0.8);
+}
+
+/* 每个棋盘格的基础样式 */
+.cell {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(145deg, #004466, #0088aa);
+    border: 1px solid #00aaff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* 悬停效果 */
+.cell:hover {
+    transform: scale(1.1);
+    background: #00ccff;
+    box-shadow: 0px 0px 8px rgba(0, 170, 255, 0.9);
+}
+
+/* 命中和未命中标记 */
+.cell.hit {
+    background: url('../assets/hit.png') no-repeat center;
+    background-size: contain;
+    box-shadow: 0px 0px 12px rgba(255, 0, 0, 0.8);
+}
+
+.cell.miss {
+    background: url('../assets/miss.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.8;
+}
+
+/* 游戏控制区域,Timer
+*/
+.game-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* 计时器样式 */
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ccff;
+}
+
+/* 按钮样式 */
+button {
+    background: linear-gradient(180deg, #ff4747, #aa0000);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.7);
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(180deg, #ff6666, #cc0000);
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 1);
+    transform: scale(1.05);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .game-board {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(10, 40px);
+        grid-template-rows: repeat(10, 40px);
+    }
+
+    .cell {
+        width: 40px;
+        height: 40px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

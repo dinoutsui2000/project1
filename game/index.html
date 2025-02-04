@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - Battleship</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+<nav>
+    <h1>Battleship</h1>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html" class="active">Game</a></li>
+        <li><a href="../rules/index.html">Rules</a></li>
+        <li><a href="../highscores/index.html">High Scores</a></li>
+    </ul>
+</nav>
+<main>
+    <br>
+    <h2>Game in Progress</h2>
+    <p class = 'normal-font'>Try to sink the enemy fleet!</p>
+
+    <div class="game-board">
+        <div class="board">
+            <h3>Your Board</h3>
+            <div class="grid player-grid">
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+
+                <div class="cell miss"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+
+        <div class="board">
+            <h3>Enemy Board</h3>
+            <div class="grid enemy-grid">
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+
+                <div class="cell miss"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+
+                <div class="cell hit"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell hit"></div>
+                <div class="cell miss"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="game-controls">
+        <p class="normal-font">Time elapsed: <span id="timer">00:10</span></p>
+        <button>Restart</button>
+    </div>
+</main>
+</body>
+</html>
